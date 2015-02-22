@@ -36,7 +36,7 @@ class Viewer extends Application {
 	$this->data = array_merge($this->data, (array) $this->quotes->get($id));
 	$this->data['pagebody'] = 'justone';    // this is the view we want shown
         
-        $this->caboose->needed('jrating','holywood');
+        $this->caboose->needed('jrating','hollywood');
         
 	$this->render();
     }

@@ -21,8 +21,9 @@ class Welcome extends Application {
     function index()
     {
 	$this->data['pagebody'] = 'justone';    // this is the view we want shown
-	$this->data = array_merge($this->data, (array) $this->quotes->last());
-        $this->caboose->needed('jrating','holywood');
+	$choice = rand(1,$this->quotes->size());
+        $this->data = array_merge($this->data, (array) $this->quotes->get($choice)); 
+        $this->caboose->needed('jrating','hollywood');
 	$this->render();
     }
 
